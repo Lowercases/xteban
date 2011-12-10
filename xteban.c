@@ -3,7 +3,7 @@
 
 #define URL_VIDEO "http://www.youtube.com/watch?v=wC22UvgdKC8\n"
 #define DAS_VERSIONEN_MAJOR "2"
-#define DAS_VERSIONEN_MINOR "x"
+#define DAS_VERSIONEN_MINOR "1"
 
 signed long long int
 print_das_versionen(void) {
