@@ -19,7 +19,8 @@ print_das_versionen(void) {
 
 }
 
-main() {
+int
+main(int argc, char *argv[]) {
     char *s;
 
     s = getenv("XTEBAN_PRINT_VERSION");
