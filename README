@@ -1,0 +1,37 @@
+Los commits mas interesantes son:
+
+https://github.com/Lowercases/xteban/commit/a57fcc1e59ec66536b041901782a8c4005c6c612
+El commit donde se crea release-1.1. Se hace un cambio en 1.1, que es introducir un Makefile, y ya se crea el branch.
+
+https://github.com/Lowercases/xteban/commit/3d65fa1377565f15d75a0a95abfb8e921ce2c542
+Este commit se hace al inicio del proyecto, pero luego de que release-1.1 haya sido forkeada. El programador snob introduce un bug gravísimo, que solo será solucionado al final (en las tres branches, 1.1 cuando ya es incompatible, 2.1 y 2.2) según el modelo cherry-pick que expliqué hoy en el otro correo.
+
+https://github.com/Lowercases/xteban/commit/85cd88b7e3c038cb66e731853dce7888be6e1bf4
+Se introduce un cambio en master, que es imprimir la versión.
+
+https://github.com/Lowercases/xteban/commit/4be872a614075dfe6958d63c80a64fcfe63a2610
+El que mantiene el branch release-1.1 decide que quiere poder imprimir la versión, pero no quiere introducir el bug del segfault que aqueja a master. Entonces hace un cherry-pick del commit de la version, y se cree groso por ello.
+
+https://github.com/Lowercases/xteban/commit/8dc31dcb37c574b3f34f4446f63bad3cee311146
+Merge completo de 1.1 sobre master. Master quiere tener el Makefile, así que hace un merge dado que 1.1 aún es compatible con master (mínimamente).
+
+https://github.com/Lowercases/xteban/commit/fcbd1ac7a0fa3d9a147681438b6741afd72fcae8
+El horror. El que mantiene release-1.1 sigue implementando cosas a su manera y 1.1 es definitivamente incompatible con master.
+
+https://github.com/Lowercases/xteban/commit/ef1724ef36d9f08971eebc56ce645e83488ea3e3
+Se forkea release-2.1, pero esta vez se quieren hacer las cosas bien: todo cambio en 2.1 se mergeará a master. El infame bug del segfault sigue presente, pero los customers quieren ver una release y el departamento de marketing fuerza a hacerla con el bug.
+
+https://github.com/Lowercases/xteban/commit/4a032d45b54e73971f5034cd1a4de7cccfdbf9aa
+Finalmente, un programador novato encuentra la causa del infame bug del segfault y lo soluciona en 2.1.
+
+https://github.com/Lowercases/xteban/commit/5bbb1cd95c4c970ea7c95ad0a32d26116a4d112f
+Dado que 2.1 es un subset de 2.x, solucionar el bug en 2.x es trivial: simplemente un merge de 2.1 sobre 2.x.
+
+https://github.com/Lowercases/xteban/commit/ae00f636ec843b9adb21c491c423f06496c438d3
+Bug general, que afecta a TODAS las versiones, se soluciona en release-1.1 inicialmente.
+
+https://github.com/Lowercases/xteban/commit/71b8cfbe673bf7002c3ea31c2accb3bc502a58ae
+En 2.1: se hace un cherry-pick de release-1.1 para solucionar SOLAMENTE ese bug, pero no incluir los otros cambios que hay en 1.1
+
+https://github.com/Lowercases/xteban/commit/6a54957b181930ac69090efb67ffdc8160371624
+En 2.2: se hace un merge de 2.1, que ya contiene el cherry-pick.
