@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define URL_VIDEO "http://www.youtube.com/watch?v=wC22UvgdKC8\n"
+#define URL_VIDEO "http://www.youtube.com/watch?v=-dadPWhEhVk\n"
 #define DAS_VERSIONEN_MAJOR "1"
 #define DAS_VERSIONEN_MINOR "1"
 
