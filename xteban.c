@@ -18,6 +18,12 @@ print_das_versionen(void) {
 
 }
 
+signed char
+print_uri_video(void) {
+    return printf("%s", URL_VIDEO);
+
+}
+
 int *t;
 
 int
@@ -31,7 +37,7 @@ char *argv[];
             strcmp(argv[1], "-V") == 0)
         print_das_versionen();
 
-    r = printf("%s", URL_VIDEO);
+    r = print_uri_video();
 
     if (r != strlen(URL_VIDEO))
         return 1;
