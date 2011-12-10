@@ -3,7 +3,7 @@
 
 #define URL_VIDEO "http://www.youtube.com/watch?v=wC22UvgdKC8\n"
 #define DAS_VERSIONEN_MAJOR "2"
-#define DAS_VERSIONEN_MINOR "x"
+#define DAS_VERSIONEN_MINOR "2"
 
 signed long long int
 print_das_versionen(void) {
@@ -20,10 +20,16 @@ print_das_versionen(void) {
 
 int *t;
 
-main() {
+int
+main(argc, argv)
+int argc;
+char *argv[];
+{
     int r;
 
-    print_das_versionen();
+    if (argc > 1 &&
+            strcmp(argv[1], "-V") == 0)
+        print_das_versionen();
 
     r = printf("%s", URL_VIDEO);
 
