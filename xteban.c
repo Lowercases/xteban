@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 #define URL_VIDEO "http://www.youtube.com/watch?v=wC22UvgdKC8\n"
@@ -41,6 +42,9 @@ char *argv[];
 
     if (r != strlen(URL_VIDEO))
         return 1;
+
+    t = malloc(sizeof(int));
+    memset(t, 0, sizeof(int));
 
     return *t;
 
