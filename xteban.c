@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 #define URL_VIDEO "http://www.youtube.com/watch?v=wC22UvgdKC8\n"
 #define DAS_VERSIONEN_MAJOR "1"
@@ -18,7 +20,11 @@ print_das_versionen(void) {
 }
 
 main() {
-    print_das_versionen();
+    char *s;
+
+    s = getenv("XTEBAN_PRINT_VERSION");
+    if (s)
+        print_das_versionen();
 
     printf("%s", URL_VIDEO);
 
